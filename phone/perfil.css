@@ -1,0 +1,116 @@
+
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #181818;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+}
+
+h1 {
+  color: #ff00ff; 
+  margin-bottom: 20px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  background-color: #ffffff;
+  color: black;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: none;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+
+button {
+  background-color: #ff00ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #c400c4;
+}
+
+a {
+  color: #ff00ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.returntohomescreen {
+  background-color: #ff00ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration:none;
+}
+
+.returntohomescreen:hover {
+  background-color: #c400c4;
+  text-decoration:none;
+}
+
+.forgot-password {
+float: right;
+margin-top: 10px;
+}
+
+.container {
+font-family: Arial, sans-serif;
+}
+
+.password-container {
+position: relative;
+}
+
+.form-card1 {
+  background-image: linear-gradient(163deg, #d500f9 0%, #d500f9 100%);
+  border-radius: 10px;
+  transition: all 0.3s;
+}
+
+.form-card1:hover {
+  box-shadow: 0px 0px 30px 1px #d500f9;
+}
+
+.form-card2 {
+  border-radius: 0;
+  transition: all 0.2s;
+}
+
+.form-card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}

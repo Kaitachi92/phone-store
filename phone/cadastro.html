@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro de Usuário</h2>
+        <form id="cadastroForm">
+            <div>
+                <label for="username">Nome de Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <span class="error" id="usernameError"></span>
+                <ul class="suggestions" id="usernameSuggestions"></ul>
+            </div>
+<br>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+<br>
+            <div>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <span class="error" id="passwordError"></span>
+            </div>
+<br>
+            <div>
+                <label for="confirmPassword">Confirmar Senha:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <span class="error" id="confirmPasswordError"></span>
+            </div>
+            
+            <button type="submit">Cadastrar</button>
+            <a class="ReturnToLogin" href="perfil.html">Voltar para o login</a>
+      
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById('cadastroForm');
+        const usernameInput = document.getElementById('username');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+        const usernameError = document.getElementById('usernameError');
+        const emailError = document.getElementById('emailError');
+        const passwordError = document.getElementById('passwordError');
+        const confirmPasswordError = document.getElementById('confirmPasswordError');
+        const usernameSuggestions = document.getElementById('usernameSuggestions');
+
+        // Dados de usuários (substitua por sua lógica de armazenamento real)
+        const users = {
+            // "bruno": {
+            //     "email": "bruno@example.com",
+            //     "password": "123456"
+            // }
+        };
+
+        // Função para validar o nome de usuário
+        function validateUsername(username) {
+            // Verificar se o nome de usuário já está sendo usado
+            if (username in users) {
+                usernameError.textContent = "Nome de usuário já está em uso. Por favor, escolha outro.";
+                return false;
+            }
+            // Verificar o comprimento do nome de usuário
+            if (username.length < 4) {
+                usernameError.textContent = "Nome de usuário deve ter pelo menos 4 caracteres.";
+                return false;
+            }
+            return true;
+        }
+
+        // Função para gerar sugestões de nome de usuário
+        function generateUsernameSuggestions(username) {
+            usernameSuggestions.innerHTML = '';
+            usernameSuggestions.style.display = 'block';
+            // Gerar sugestões (implemente sua lógica)
+            const suggestions = [`${username}1`, `${username}123`, `${username}_1`];
+            suggestions.forEach(suggestion => {
+                const listItem = document.createElement('li');
+                listItem.textContent = suggestion;
+                listItem.addEventListener('click', () => {
+                    usernameInput.value = suggestion;
+                    usernameSuggestions.style.display = 'none';
+                    validateUsername(suggestion);
+                });
+                usernameSuggestions.appendChild(listItem);
+            });
+        }
+
+        // Função para validar o email
+        function validateEmail(email) {
+            // Verificar se o email já está sendo usado
+            for (const user in users) {
+                if (users[user].email === email) {
+                    emailError.textContent = "Este email já está em uso.";
+                    return false;
+                }
+            }
+            // Verificar o formato do email
+            if (!email.match(/^\S+@\S+\.\S+$/)) {
+                emailError.textContent = "Por favor, insira um email válido.";
+                return false;
+            }
+            return true;
+        }
+
+        // Função para validar a senha
+        function validatePassword(password) {
+            // Verificar o comprimento da senha
+            if (password.length < 6) {
+                passwordError.textContent = "A senha deve ter pelo menos 6 caracteres.";
+                return false;
+            }
+            return true;
+        }
+
+        // Função para validar a confirmação da senha
+        function validateConfirmPassword(confirmPassword, password) {
+            if (confirmPassword !== password) {
+                confirmPasswordError.textContent = "As senhas não coincidem.";
+                return false;
+            }
+            return true;
+        }
+
+        // Evento de envio do formulário
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            usernameError.textContent = '';
+            emailError.textContent = '';
+            passwordError.textContent = '';
+            confirmPasswordError.textContent = '';
+            usernameSuggestions.style.display = 'none';
+
+            const username = usernameInput.value;
+            const email = emailInput.value;
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+
+            let isValid = true;
+
+            if (!validateUsername(username)) {
+                isValid = false;
+            }
+
+            if (!validateEmail(email)) {
+                isValid = false;
+            }
+
+            if (!validatePassword(password)) {
+                isValid = false;
+            }
+
+            if (!validateConfirmPassword(confirmPassword, password)) {
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Salvar o novo usuário (implemente sua lógica de armazenamento real)
+                users[username] = {
+                    "email": email,
+                    "password": password
+                };
+                // Redirecionar para a página de login ou exibir uma mensagem de sucesso
+                alert("Usuário cadastrado com sucesso!");
+                form.reset();
+            } else {
+                // Exibir mensagens de erro
+                if (usernameInput.value.length >= 4) {
+                    generateUsernameSuggestions(usernameInput.value);
+                }
+            }
+        });
+
+        // Eventos de mudança nos campos de entrada
+        usernameInput.addEventListener('input', () => {
+            usernameError.textContent = '';
+            usernameSuggestions.style.display = 'none';
+            validateUsername(usernameInput.value);
+        });
+
+        emailInput.addEventListener('input', () => {
+            emailError.textContent = '';
+            validateEmail(emailInput.value);
+        });
+
+        passwordInput.addEventListener('input', () => {
+            passwordError.textContent = '';
+            validatePassword(passwordInput.value);
+        });
+
+        confirmPasswordInput.addEventListener('input', () => {
+            confirmPasswordError.textContent = '';
+            validateConfirmPassword(confirmPasswordInput.value, passwordInput.value);
+        });
+    </script>
+</body>
+</html>

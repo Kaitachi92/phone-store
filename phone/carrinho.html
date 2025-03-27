@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho de Compras da Phone Store</title>
+  <link rel="stylesheet" href="carrinho.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <h1 class="title">Carrinho de Compras da <span class="phone-store">Phone Store</span></h1>
+  </header>
+  <main class="main">
+    <section class="cart">
+      <h2 class="cart-title">Seu Carrinho</h2>
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th class="product-column">Produto:</th>
+            <th class="category-column">Categoria:</th>
+            <th class="price-column">Preço:</th>
+            <th class="quantity-column">Quantidade:</th>
+            <th class="total-column">Total</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+          <!-- items will be rendered here -->
+        </tbody>
+      </table>
+    </section>
+    <aside class="cart-summary">
+      <h3 class="summary-title">Resumo da Compra</h3>
+      <p class="total-price">Preço Total: <span id="total-price">R$ 0,00</span></p>
+      <p class="discount">Desconto: <span id="discount">R$ 0,00</span></p>
+      <p class="final-price">Total a Pagar: <span id="final-price">R$ 0,00</span></p>
+      <button class="checkout-btn" id="checkout-btn">Finalizar Compra</button>
+      <a class="return-btn" id="returntohomescreen" href="../index.html">Voltar para tela inicial</a>
+    </aside>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 Phone Store</p>
+  </footer>
+</body>
+</html>

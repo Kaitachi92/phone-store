@@ -1,0 +1,572 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.btn:hover {
+  float: right;
+}
+
+.card {
+
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #d500f9;
+}
+
+header img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-right: 10px;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  color: #d500f9;
+}
+
+aside {
+  width: 25%;
+  margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+aside h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.menu2 {
+  display: flex;
+  float: right;
+}
+
+aside ul {
+  list-style: none;
+  margin-bottom: 10px;
+  border: 1px solid #d3d3d3;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+aside li {
+  margin-bottom: 5px;
+}
+
+aside a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+aside a:hover {
+  background-color: #d3d3d3;
+}
+
+main {
+  width: 73%;
+}
+
+main h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+main ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+main li {
+  width: 31%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+main img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+main h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+main p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+main .btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.btn a {
+  text-decoration: none;
+  color: #ddd;
+}
+
+main .btn:hover {
+  background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  aside {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  main {
+    width: 100%;
+  }
+}
+
+
+
+
+.container-input {
+  position: relative;
+
+}
+
+.input {
+  width: 150px;
+  margin-left: 460px;
+  padding: 10px 0px 10px 40px;
+  border-radius: 9999px;
+  border: solid 1px #333;
+  transition: all .2s ease-in-out;
+  outline: none;
+  opacity: 0.8;
+}
+
+.container-input svg {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+}
+
+.input:focus {
+  opacity: 1;
+  width: 250px;
+}
+
+
+.container-1 {
+  float: right;
+}
+
+
+.burger {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  transition: 300ms;
+  border-radius: 10px;
+}
+
+.burger input[type="checkbox"] {
+  appearance: none;
+  transition: 300ms;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  transition: 300ms;
+  transform-origin: center center;
+}
+
+.burger::before {
+  transform: translateY(8px);
+}
+
+.burger::after {
+  transform: translateY(-8px);
+}
+
+.burger .line,
+.burger::before,
+.burger::after {
+  width: 25px;
+  height: 2.1px;
+  display: block;
+  background-color: #d500f9;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.burger .line:checked {
+  width: 0;
+  transition-delay: 100ms;
+}
+
+.burger:has(.line:checked)::before {
+  animation: animation1 400ms ease-out 0s 1 both;
+}
+
+.burger:has(.line:checked)::after {
+  animation: animation2 400ms ease-out 0s 1 both;
+}
+
+.burger:hover {
+  background: #aeaeae;
+  border-radius: 50%;
+}
+
+.burger:hover .line,
+.burger:hover::before,
+.burger:hover::after {
+  background: #e8e8e8;
+}
+
+.burger:active {
+  scale: 0.95;
+}
+
+@keyframes animation1 {
+  0% {
+    transform: translateY(8px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(45deg);
+  }
+}
+
+@keyframes animation2 {
+  0% {
+    transform: translateY(-8px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(0px) rotate(-45deg);
+  }
+}
+
+.card button {
+  padding: 8px 25px;
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  border: none;
+  margin-top: 30px;
+  background: rgb(34, 34, 255);
+  color: white;
+  font-weight: 600;
+}
+
+.card button:hover {
+  background: #000879;
+}
+
+
+
+.button-container {
+  display: flex;
+  /* Arrange buttons in a row */
+  justify-content: space-around;
+  /* Distribute space evenly around buttons */
+}
+
+.button {
+  /* Styles for individual buttons */
+  margin: 10px;
+  /* Add 10 pixels of margin around each button */
+}
+
+
+aside .filter-option {
+  cursor: pointer;
+}
+
+aside .filter-option.selected {
+  background-color: #ffffff;
+  color: #d500f9;
+}
+
+aside .filter-option:hover {
+  background-color: #d500f9;
+  color: #ffffff;
+}
+
+button .clear-filter {
+  background-color: #ff00ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+button .clear-filter:hover {
+  background-color: #c400c4;
+  text-decoration: none;
+}
+
+img.logo {
+  width: 100px;
+  position: absolute;
+  right: 91%;
+  top: 30px;
+
+}
+
+img.logo1 {
+  width: 110px;
+  position: absolute;
+  right: 2%;
+  top: 30px;
+  align-items: center;
+
+}
+
+
+img.logo2 {
+  position: absolute;
+  right: 35%;
+  top: 30px;
+  width: 250px;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+div.menu2 {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+svg {
+  margin-left: 465px;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 31px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.container-input {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.menu-left,
+.menu-center,
+.menu-right {
+  display: flex;
+  align-items: center;
+}
+
+.menu-left {
+  justify-content: flex-start;
+}
+
+.menu-center {
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.menu-right {
+  justify-content: flex-end;
+}
+
+.burger-icon {
+  margin-right: 20px;
+}
+
+ul.n1 {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+@media (max-width: 667px) {
+
+ .logo{position: absolute;
+  right: 91%;
+  top: 30px;
+  width: 100px; 
+}
+
+
+  body {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  aside {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+  }
+
+  .container-input {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .input {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px 40px;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}

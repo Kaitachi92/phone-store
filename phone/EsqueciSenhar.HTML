@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Esqueci a Senha</title>
+  <link rel="stylesheet" href="EsqueciSenhar.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Esqueci a Senha</h2>
+    <p>Digite seu email para receber um código de verificação:</p>
+    <input type="email" id="email" placeholder="Seu email">
+    
+    <br><br>
+
+    <button type="button" onclick="enviarCodigo()">Enviar Código</button>
+
+    <br>
+
+    <a type="button" class="ReturnToLogin" href="perfil.html">Voltar para o login</a>
+
+    <br><br>
+
+    <div id="codigo-container" style="display: none;">
+      <p>Digite o código que foi enviado para seu email:</p>
+      <input type="text" id="codigo" placeholder="Código de verificação">
+      <br><br>
+      <button onclick="verificarCodigo()">Verificar Código</button>
+    </div>
+
+    <br><br>
+
+    <div id="nova-senha-container" style="display: none;">
+      <p>Digite sua nova senha:</p>
+      <input type="password" id="nova-senha" placeholder="Nova senha">
+
+      <br><br>
+
+      <button onclick="mudarSenha()">Mudar Senha</button>
+    </div>
+  </div>
+
+  <script>
+    function enviarCodigo() {
+      // O email do usuário
+      var email = document.getElementById("email").value;
+
+      // Enviar o código de verificação para o email do usuário
+      alert("Código enviado para " + email + ".");
+
+      // Mostrar o campo para inserir o código
+      document.getElementById("codigo-container").style.display = "block";
+      document.getElementById("email").disabled = true;
+      document.getElementById("enviarCodigo").disabled = true;
+    }
+
+    function verificarCodigo() {
+      // Obter o código digitado pelo usuário
+      var codigo = document.getElementById("codigo").value;
+
+      // verificar se o código é válido
+      if (codigo === "123456") {
+        alert("Código válido!");
+        document.getElementById("nova-senha-container").style.display = "block";
+        document.getElementById("codigo-container").style.display = "none";
+      } else {
+        alert("Código inválido.");
+      }
+    }
+
+    function mudarSenha() {
+      // Obter a nova senha digitada pelo usuário
+      var novaSenha = document.getElementById("nova-senha").value;
+
+      // Atualizar a senha do usuário no banco de dados
+      alert("Senha alterada com sucesso!");
+    
+    // Redirecionar o usuário para a página de login
+     window.location.href = "perfil.html";
+    }
+  </script>
+</body>
+</html>

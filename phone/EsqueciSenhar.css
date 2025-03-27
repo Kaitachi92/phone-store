@@ -1,0 +1,90 @@
+body {
+    background-color: #181818;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    background-color: #282828;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    color: #d500f9;
+  }
+
+  input[type="email"], input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    box-sizing: border-box;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #d500f9;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    color: #c400c4;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+    padding: 14px 13px 12px 13px;
+    border: 0;
+    outline: 1px solid #c400c4;
+    border-radius: 8px;
+    line-height: 1;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+  }
+
+  button:hover {
+    background-color: #c400c4;
+    transition: all ease-in-out;
+    color: #161616;
+    cursor: pointer;
+  }
+
+
+  .ReturnToLogin {
+    display: block;
+    width: 93%;
+    color: #c400c4;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0;
+    padding: 14px 13px 12px 13px;
+    border: 0;
+    outline: 1px solid #c400c4;
+    border-radius: 8px;
+    line-height: 1;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+    text-decoration:none;
+    
+  }
+
+  .ReturnToLogin:hover {
+    background-color: #c400c4;
+    transition: all ease-in-out;
+    color: #161616;
+    cursor: pointer;
+  }

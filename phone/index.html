@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+
+        <div class="topo">
+            <img class="logo" src="img/Group 7.png" alt="Phone Icon">
+            <img class="logo2" src="img/Group 9.png" alt="phone logo">
+            <img class="logo1" src="img/Group 8.png" alt="Phone Icon">
+        </div>
+
+    </header>
+
+    <nav>
+        <ul class="n1">
+
+            <div class="burger-icon">
+                <label class="burger" for="burger">
+                    <input class="line" type="checkbox" id="burger" />
+                </label>
+            </div>
+
+
+
+            <li>
+                <div class="container-input">
+                    <input type="text" placeholder="Pesquisar..." name="text" class="input">
+                    <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                </div>
+            </li>
+
+            <div class="menu2">
+                <li><a class="btn-contact" href="contato.html"><i class="large material-icons">local_post_office</i></a>
+
+                <li>
+                    <a class="btn-cart" href="Carrinho.html"><i class="large material-icons">shopping_cart</i></a>
+                </li>
+
+                <li><a class="btn-profile" href="perfil.html"><i class="large material-icons">account_circle</i></a>
+                </li>
+
+            </div>
+
+
+        </ul>
+    </nav>
+    <aside>
+        <ul>
+            <h2>Filtrar por:</h2>
+            <li><a href="#" class="filter-option" data-filter="celulares">Celulares</a></li>
+            <li><a href="#" class="filter-option" data-filter="fones-de-ouvido">Fones de Ouvido</a></li>
+            <li><a href="#" class="filter-option" data-filter="acessorios">Acessórios</a></li>
+        </ul>
+
+        <br>
+
+        <ul>
+            <h2>Preço:</h2>
+            <li><a href="#" class="filter-option" data-filter="menor-preco">Menor preço</a></li>
+            <li><a href="#" class="filter-option" data-filter="maior-preco">Maior preço</a></li>
+        </ul>
+
+        <br>
+
+        <ul>
+            <h2>Avaliação:</h2>
+            <li><a href="#" class="filter-option" data-filter="1-estrela">1 estrela</a></li>
+            <li><a href="#" class="filter-option" data-filter="2-estrelas">2 estrelas</a></li>
+            <li><a href="#" class="filter-option" data-filter="3-estrelas">3 estrelas</a></li>
+            <li><a href="#" class="filter-option" data-filter="4-estrelas">4 estrelas</a></li>
+            <li><a href="#" class="filter-option" data-filter="5-estrelas">5 estrelas</a></li>
+        </ul>
+
+        <br>
+
+        <ul>
+            <h2>Condição:</h2>
+            <li><a href="#" class="filter-option" data-filter="novo">Novo</a></li>
+            <li><a href="#" class="filter-option" data-filter="usado">Usado</a></li>
+        </ul>
+
+        <br>
+
+        <ul>
+            <h2>Marca:</h2>
+            <li><a href="#" class="filter-option" data-filter="apple">Apple</a></li>
+            <li><a href="#" class="filter-option" data-filter="samsung">Samsung</a></li>
+            <li><a href="#" class="filter-option" data-filter="xiaomi">Xiaomi</a></li>
+        </ul>
+
+        <button id="clear-filter">Limpar filtro</button>
+    </aside>
+    <main>
+        <section>
+            <h2>Celulares</h2>
+            <ul>
+
+                <li class="card">
+
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSyRgjtR4DYTkJmxgUsYd9RotI375-MisXzHCQvxbFcyLSFnif7xFHrTu3hp_SJMAO32b6IJPtiJW4-gOJCYHXy-hYE2EFy3WP3CLgIvwM55UjkLwx7MzJ90A&usqp=CAE"
+                        alt="Phone-icon">
+                    <h3>Apple iPhone 13</h3>
+                    <p>R$ 3.500,00</p>
+                    <button class="btn">Comprar</button>
+                    <button class="btn"><a
+                            href="https://www.tudocelular.com/Apple/fichas-tecnicas/n7254/Apple-iPhone-13.html"
+                            target="_blank">Saiba mais</a></button>
+                </li>
+                </li>
+
+                <li class="card">
+
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTqDgPPto-VVk2ZvJzDo80wlvh0E73wbwNI1b7D1-w0JOkoG6wFAmTPeSqQGozl1zOMLCkvtRK11EutMrR-UFlBF5_W-3gGh5-SVZxyblrkddNk7OmpkBJYnQU&usqp=CAE"
+                        alt="Phone-icon">
+                    <h3>Samsung Galaxy S22 (Exynos)</h3>
+                    <p>R$ 2.000,00</p>
+                    <button class="btn">Comprar</button>
+                    <button class="btn"><a
+                            href="https://www.tudocelular.com/Samsung/fichas-tecnicas/n9092/Samsung-Galaxy-S22-Exynos.html"
+                            target="_blank">Saiba mais</a></button>
+                </li>
+
+                <li class="card">
+
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTS5ntuwzj263qp02bWPdOLhfuOCu6bo8ne9-UNGVk46qbtDTjzTIWyPbs_oLgUcp00NKNFgmyWd4qxiier5GqeJQTlPgqfFVQHchNr7VV_8kJOSCicPU_G&usqp=CAE"
+                        alt="Phone-icon">
+                    <h3>Xiaomi Redmi 9</h3>
+                    <p>R$ 900,00</p>
+                    <button class="btn">Comprar</button>
+                    <button class="btn"><a href="https://www.tudocelular.com/Redmi/fichas-tecnicas/n6328/Redmi-9.html"
+                            target="_blank">Saiba mais</a></button>
+                </li>
+            </ul>
+        </section>
+
+        <br>
+
+        <section>
+            <h2>Fones de Ouvido</h2>
+            <ul>
+                <li class="card">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR9lk71DVBLp8RKouA2b0XYUwxXnryZq_aMV3Yy2aaOHBEz7dib0BctbopAg9jFDyDmYlO4_gy-zxUEnbXqPMBLN8MJOYjp94qTbqoTP8_pLBpdg6tYGCGZvA&usqp=CAE"
+                        alt="Headphone 1">
+                    <h3>Apple AirPods </h3>
+                    <p>R$ 500,00</p>
+                    <button class="btn">Comprar</button>
+                    <button class="btn">Saiba mais</button>
+                </li>
+
+                <li class="card">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQrsOFl7HGd_20Pv6PLDiUnNX2scRy-l406EDJGbl6OouVPHx331IkeD8QyQhqHvyRg8pCuRQETgioy7JGzvUPwWoH9th_9Alct7uQIE3m1KYBi6hd7hlwuGB0&usqp=CAE"
+                        alt="Headphone 2">
+                    <h3>Samsung Galaxy Buds</h3>
+                    <p>R$ 400,00</p>
+                    <button class="btn">Comprar</button>
+                    <button class="btn">Saiba mais</button>
+                </li>
+
+                <li class="card">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQnRrFtDWXz1bfMrXd1Lug-Ya3huR625wa6wUd3SJANnMRaVEcSazG8B3IUjIeMDm-w5MWNd0uIHKSfIS3VkLhOYgBu6z2SDyT3rxXu9f9uXAE8Fx3MkNbsGg&usqp=CAE"
+                        alt="Headphone 3">
+                    <h3>JBL Tune 225</h3>
+                    <p>R$ 350,00</p>
+                    <button class="btn">Comprar</button>
+                    <button class="btn">Saiba mais</button>
+                </li>
+            </ul>
+        </section>
+
+        <br>
+
+        <section>
+            <h2>Acessórios</h2>
+            <ul>
+                <li class="card">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQpVylI2QksC5eWFPH_NzB7lDJ1umehiGk2BxLgz8JeHEPpJqv-REbF4P2ScGo5_T0jSFvQTbzSMHEZl1b-x_EZzCzoM1pLLzWru-ExnuFIYf_KpC8MBgbp&usqp=CAE"
+                        alt="Accessory 1">
+                    <h3>Carregador Portátil</h3>
+                    <p>R$ 250,00</p>
+                    <button class="btn">Comprar</button>
+                    <button class="btn">Saiba mais</button>
+                </li>
+
+                <li class="card">
+                    <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSZKAnKzLXCSPALlLYVCfphuF65AjSLMaQiHQ_hdTTCkebuy1lkR_9sMaLghvPVcZE9FGed3EU2sPvcqVkYnxGOAyw6aOivw5HBIAm6T561ZZRKqsQHoushBw&usqp=CAE"
+                        alt="Accessory 2">
+                    <h3>Estabilizador Gimbal H4 3 Eixos</h3>
+                    <p>R$ 300,00</p>
+                    <button class="btn">Comprar</button>
+                    <button class="btn">Saiba mais</button>
+                </li>
+
+                <li class="card">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRR_3k_I72_DbKrnjqhnS0SjL9LXfzdkajOSA3wVxYsYaa437BoVQ0eY-Tz_XkeTUOjdRA8633CnTC55Es1pnVkDfvJinsr04GQcvLi2ZCkHqwYc7waN0ZC-Q&usqp=CAE"
+                        alt="Accessory 3">
+                    <h3>Capa Capinha Case Para Poco X6 Pro</h3>
+                    <p>R$ 100,00</p>
+                    <button class="btn">Comprar</button>
+                    <button class="btn">Saiba mais</button>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        function pesquisarProdutos() {
+            // Obter o valor da pesquisa
+            var pesquisa = document.getElementById("pesquisa").value;
+
+            // Fazer uma solicitação ao banco de dados para buscar produtos que contenham a palavra ou frase pesquisada
+            fetch('/api/produtos', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                params: {
+                    pesquisa: pesquisa
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Mostrar os resultados da pesquisa
+                    var resultados = document.getElementById("resultados");
+                    resultados.innerHTML = "";
+
+                    data.forEach(produto => {
+                        var item = document.createElement("li");
+                        item.textContent = produto.nome;
+                        resultados.appendChild(item);
+                    });
+                })
+                .catch(error => console.error(error));
+
+            // esse e a parte de selecionar no filtro
+            const filterOptions = document.querySelectorAll('.filter-option');
+
+            filterOptions.forEach((option) => {
+                option.addEventListener('click', (event) => {
+                    if (option.classList.contains('selected')) {
+                        option.classList.remove('selected');
+                        option.classList.add('deselected');
+                    } else {
+                        option.classList.add('selected');
+                        option.classList.remove('deselected');
+                    }
+                });
+            });
+
+
+            // comando de limbar o filtro selecionados
+            document.getElementById('clear-filter').addEventListener('click', () => {
+                const filterOptions = document.querySelectorAll('.filter-option');
+                filterOptions.forEach((option) => {
+                    option.classList.remove('selected');
+                    option.classList.remove('deselected');
+                });
+            });
+
+        }
+
+        // comando para voltar todos os produtos
+
+        let filteredProducts = [];
+
+        document.getElementById('clear-filter').addEventListener('click', () => {
+            filteredProducts = [];
+            // Atualizar a lista de produtos aqui
+            updateProductList();
+        });
+
+        function updateProductList() {
+            // Mostrar todos os produtos novamente
+            const productList = document.getElementById('product-list');
+            productList.innerHTML = '';
+            // Adicionar todos os produtos à lista novamente
+            products.forEach((product) => {
+                const productItem = document.createElement('li');
+                productItem.textContent = product.name;
+                productList.appendChild(productItem);
+            });
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
